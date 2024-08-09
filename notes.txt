@@ -6,7 +6,7 @@ CLI: Run `docker images` to check images
 2. Create Docker Container
 `docker run --name <container-name> -e POSTGRES_PASSWORD=<password> -d -p 5432:5432 <postgres-dist>`
 Example
-`docker run --name fastapi-postgres -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres:alpine`
+`docker run --name fastapi-postgres -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=password -e POSTGRES_HOST_AUTH_METHOD=trust -d -p 5621:5432 postgres:alpine`
 
 3. Check Containers
 `docker ps`
@@ -38,3 +38,8 @@ Example
 # Make connection available to outside of container
 `psql -h <hostname> -p <port> <db_user>`
 `psql -h localhost -p 5432 postgres` # Makes available outside of container
+
+
+# RUNNING WITHOUT PASSWORD
+`docker run postgres:alpine -e POSTGRES_PASSWORD=password POSTGRES_HOST_AUTH_METHOD=trust`
+`docker run --name fastapi-postgres -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=password -e POSTGRES_HOST_AUTH_METHOD=trust -d -p 5432:5432 postgres:alpine`

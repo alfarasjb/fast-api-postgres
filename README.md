@@ -1,5 +1,5 @@
 # fast-api-postgres 
-
+https://pankajconnect.medium.com/all-about-pg-hba-conf-authentication-methods-postgresql-95137d896105
 https://www.youtube.com/watch?v=2X8B_X2c27Q
 
 1. Create Postgres docker container - This will host the database
