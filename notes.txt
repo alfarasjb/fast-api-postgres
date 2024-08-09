@@ -1,7 +1,3 @@
-# fast-api-postgres 
-
-https://www.youtube.com/watch?v=2X8B_X2c27Q
-
 1. Create Postgres docker container - This will host the database
 CLI: Run `docker -v` to verify
 CLI: Run `docker pull postgres:alpine`
